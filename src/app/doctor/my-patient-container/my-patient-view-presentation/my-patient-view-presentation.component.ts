@@ -19,11 +19,17 @@ export class MyPatientViewPresentationComponent implements OnInit {
   }
 
   public _prescriptionData:any;
+  public show:Boolean
   constructor() { 
     console.log(this._prescriptionData);
+    this.show = false;
   }
 
   ngOnInit(): void {
+  }
+
+  showDetails(){
+    this.show = !this.show;
   }
 
 }

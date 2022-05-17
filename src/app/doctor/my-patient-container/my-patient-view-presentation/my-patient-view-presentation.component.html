@@ -4,26 +4,62 @@
         <button class="btn btn-primary py-1 px-3 fs-4"> + </button>
     </div>
     <div class="p-5">
-        <div class="prescripton-diseases position-relative rounded-3 p-3 d-flex justify-content-between aligm-items-center" style="cursor: pointer;">
-            <!-- <span class="text-primary fw-bold fs-5"><i class='bx bxs-right-arrow px-3' style="font-size: 0.8rem;"></i> Diarrhea, Fever </span>
-            <span class="text-muted pt-2" style="font-size: 0.8rem;">13 April 2021</span>
-            <div class="prescription-medicine border border-3 p-3 position-absolute w-100">
-                <table class="w-100" style="font-size: 0.8rem;">
-                    <tr style="color: #76969e;">
-                        <th>Medicine Name</th>
-                        <th>Doages</th>
-                        <th>Timing</th>
-                        <th>Days</th>
-                    </tr>
-                    <tr>
-                        <td> Paracetamol </td>
-                        <td> 1 </td>
-                        <td> Mo,Af,Ni </td>
-                        <td> 3 </td>
-                    </tr>
-                </table>
-            </div> -->
-            <span> {{_prescriptionData.name}} </span>
+
+        
+
+        <!-- <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                    aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="prescripton-diseases position-relative rounded-3 p-3 d-flex justify-content-between aligm-items-center" style="cursor: pointer;" (click)="showDetails()">
+            <span class="text-primary bx bx-right-arrow px-3 fw-bold">
+                Diarrhea,Fever
+            </span>
+            <div>
+                <p class="m-0">Time</p>
+            </div>
+        </div>
+        <div class="border p-3" [ngClass]="show?'viewDetails':'hideDetails'">
+            <table class="table patient-prescriptions w-100" style="font-size: 0.8rem;">
+                <tr style="color: #76969e;">
+                    <th>Medicine Name</th>
+                    <th>Doages</th>
+                    <th>Timing</th>
+                    <th>Days</th>
+                </tr>
+                <tr>
+                    <td> Paracetamol </td>
+                    <td> 1 </td>
+                    <td> Mo,Af,Ni After Meal </td>
+                    <td> 3 </td>
+                </tr>
+                <tr>
+                    <td> Paracetamol </td>
+                    <td> 1 </td>
+                    <td> Mo,Af,Ni After Meal </td>
+                    <td> 3 </td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
+    
