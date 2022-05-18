@@ -8,6 +8,7 @@ import { MyPatientTablePresentationComponent } from './my-patient-container/my-p
 import { MyPatientViewPresentationComponent } from './my-patient-container/my-patient-view-presentation/my-patient-view-presentation.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DoctorService } from './doctor.service';
+import { ScrolleventDirective } from './my-patient-container/scrollevent.directive';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DoctorService } from './doctor.service';
     DoctorComponent,
     MyPatientContainerComponent,
     MyPatientTablePresentationComponent,
-    MyPatientViewPresentationComponent
+    MyPatientViewPresentationComponent,
+    ScrolleventDirective
   ],
   imports: [
     CommonModule,

@@ -20,7 +20,12 @@ export class MyPatientTablePresentationComponent implements OnInit {
   }
 
   @Output() public getId:EventEmitter<number>;
+
   public selected:number = 1;
+  public viewTotalProfile = 9;
+  public viewProfile = [];
+
+
   constructor() { 
     this.getId = new EventEmitter();
   }
@@ -32,6 +37,14 @@ export class MyPatientTablePresentationComponent implements OnInit {
   public onpatient(id:number){
     this.selected = id;
     this.getId.emit(this.selected);
+  }
+
+  public appendItems(){
+
+  }
+
+  public scrollDown(event:any){
+    console.log(event);
   }
 
 }
